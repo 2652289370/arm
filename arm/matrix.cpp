@@ -153,7 +153,7 @@ namespace matrix
 		}
 		return res;
 	}
-
+ 
 
 #define _EXPLICIT_DEFINE(CT) template Matrix<CT> operator*(const CT& val, const Matrix<CT>& m)
 	_EXPLICIT_DEFINE(char);

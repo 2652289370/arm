@@ -17,7 +17,7 @@ getArraySize(T(&)[N])
 
 #define arraysize(array) (getArraySize(array))
 
-
+ 
 
 struct DH
 {

@@ -1,8 +1,13 @@
 ﻿  DH.cpp
-D:\c\arm\arm\DH.cpp(32,42): warning C4267: “参数”: 从“size_t”转换到“uint32_t”，可能丢失数据
+E:\code\arm\arm\DH.cpp(32,42): warning C4267: “参数”: 从“size_t”转换到“uint32_t”，可能丢失数据
   main.cpp
-D:\c\arm\arm\main.cpp(18,33): warning C4305: “参数”: 从“double”到“float”截断
-D:\c\arm\arm\main.cpp(21,33): warning C4305: “参数”: 从“double”到“float”截断
-D:\c\arm\arm\main.cpp(22,33): warning C4305: “参数”: 从“double”到“float”截断
+E:\code\arm\arm\main.cpp(18,33): warning C4305: “参数”: 从“double”到“float”截断
+E:\code\arm\arm\main.cpp(21,33): warning C4305: “参数”: 从“double”到“float”截断
+E:\code\arm\arm\main.cpp(22,33): warning C4305: “参数”: 从“double”到“float”截断
+  matrix.cpp
+E:\code\arm\arm\matrix.cpp(159,24): warning C4667: “matrix::Matrix<char> matrix::operator *(const char &,const matrix::Matrix<char> &)”: 未定义与强制实例化匹配的函数模板
+E:\code\arm\arm\matrix.cpp(160,23): warning C4667: “matrix::Matrix<int> matrix::operator *(const int &,const matrix::Matrix<int> &)”: 未定义与强制实例化匹配的函数模板
+E:\code\arm\arm\matrix.cpp(161,25): warning C4667: “matrix::Matrix<float> matrix::operator *(const float &,const matrix::Matrix<float> &)”: 未定义与强制实例化匹配的函数模板
+E:\code\arm\arm\matrix.cpp(162,26): warning C4667: “matrix::Matrix<double> matrix::operator *(const double &,const matrix::Matrix<double> &)”: 未定义与强制实例化匹配的函数模板
   正在生成代码...
-  arm.vcxproj -> D:\c\arm\x64\Debug\arm.exe
+  arm.vcxproj -> E:\code\arm\x64\Debug\arm.exe
