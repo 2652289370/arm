@@ -8,11 +8,18 @@
 
 #define PI 3.1415926
 #define DEBUG
+
+template <typename T, size_t N> size_t
+getArraySize(T(&)[N])
+{
+    return N;
+}
+
 #define arraysize(array) (getArraySize(array))
 
 
 
-class DH
+struct DH
 {
 public:
     typedef std::shared_ptr<DH> Ptr;
@@ -29,37 +36,20 @@ public:
     ~DH() {}
 };
 
-template <typename T, size_t N> size_t
-getArraySize(T(&a)[N])
-{
-    return N;
-}
-
-template<size_t N> size_t
-getArraySize(DH (& a)[N])
-{
-    return N;
-}
-
-
 
 
 class Kinetic
 {
 private:
     size_t joint_num;
-    DH* arms_ = nullptr;
+    DH* arms_ = new DH[joint_num]();
 public:
-    Kinetic(DH* arms)
+    Kinetic(DH* arms, size_t num) : joint_num(num)
     {
-        joint_num = 4;
-        arms_ = new DH[joint_num]();
-        arms_[0] = { PI / 2, 0, 0.43, 0 };
-        arms_[1] = {   0, 0, 0.43, 0 };
-        arms_[2] = {   0, 0, 0.43, 0 };
-        arms_[3] = { PI / 2, 0, 0.43, 0 };
-        //arms[4] = {-PI / 2, 0, 0.43, 0 };
-        //arms[5] = { 0, 0, 0.43, 0 };
+        for (size_t i = 0; i < joint_num; i++)
+        {
+            arms_[i] = arms[i];
+        }
 
     }
 
